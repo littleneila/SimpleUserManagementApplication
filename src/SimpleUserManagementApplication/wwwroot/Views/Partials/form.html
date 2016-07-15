@@ -1,0 +1,42 @@
+﻿<div class="form-group">
+  <label for="Password">Password</label>
+  <input name="Password" type="password" class="form-control" placeholder="Password" ng-model="user.Password" ng-required="true" ng-pattern="passwordPattern">
+  <div ng-messages="form.Password.$error" class="error-label">
+    <p ng-message="required">Your password is required.</p>
+    <p ng-message="pattern">Your password must be at least 8 characters long, contain both letters and numbers, and at least an upper case.</p>
+  </div>
+</div>
+<div class="form-group">
+  <label for="Firstname">Firstname</label>
+  <input name="Firstname" type="text" class="form-control" placeholder="Firstname" ng-model="user.Firstname" ng-required="true">
+  <div ng-messages="form.Firstname.$error" class="error-label">
+    <p ng-message="required">Your firstname is required.</p>
+  </div>
+</div>
+<div class="form-group">
+  <label for="Lastname">Lastname</label>
+  <input name="Lastname" type="text" class="form-control" placeholder="Lastname" ng-model="user.Lastname" ng-required="true">
+  <div ng-messages="form.Lastname.$error" class="error-label">
+    <p ng-message="required">Your lastname is required.</p>
+  </div>
+</div>
+<div class="form-group">
+  <label for="DateOfBirth">Date of Birth</label>
+  <input name="DateOfBirth" type="date" class="form-control" placeholder="Date of birth" ng-model="user.DateOfBirth" jsonDate>
+</div>
+<div class="form-group">
+  <label for="Email">Email</label>
+  <input name="Email" type="email" class="form-control" placeholder="Email" ng-model="user.Email" ng-required="true" ng-pattern="emailPattern">
+  <div ng-messages="form.Email.$error" class="error-label">
+    <p ng-message="required">Your email is required.</p>
+    <p ng-message="pattern">Your email must be a valid email address.</p>
+  </div>
+</div>
+<div class="form-group">
+  <label for="Phone">Phone</label>
+  <input name="Phone" type="text" class="form-control" placeholder="Phone" ng-model="user.Phone">
+</div>
+<div class="form-group">
+  <label for="Mobile">Mobile</label>
+  <input name="Mobile" type="text" class="form-control" placeholder="Mobile" ng-model="user.Mobile">
+</div>

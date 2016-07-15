@@ -1,0 +1,38 @@
+﻿<div>
+    <h1>Accounts</h1>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Date of Birth</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Mobile</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="user in userList.users">
+                <td>{{user.Username}}</td>
+                <td>{{user.Password}}</td>
+                <td>{{user.Firstname}}</td>
+                <td>{{user.Lastname}}</td>
+                <td>{{user.DateOfBirth | date:'dd/MM/yyyy'}}</td>
+                <td>{{user.Email}}</td>
+                <td>{{user.Phone}}</td>
+                <td>{{user.Mobile}}</td>
+                <td>
+                    <a href="/user/edit/{{user.UserId}}" class="btn btn-default btn-xs">edit</a>
+                    <a href="/user/delete/{{user.UserId}}" class="btn btn-danger btn-xs">delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>
+        <a href="/user/add" class="btn btn-primary">Create a new user</a>
+    </p>
+</div>
