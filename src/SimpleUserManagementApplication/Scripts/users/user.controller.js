@@ -14,6 +14,25 @@
     function UserListController(User) {
         var vm = this;
         vm.users = User.query();
+
+        vm.limitOptions = [5, 10, 15];
+
+        vm.query = {
+            order: 'UserId',
+            limit: 5,
+            page: 1
+        };
+
+        vm.filter = {
+            userid: '',
+            username: '',
+            firstname: '',
+            lastname: '',
+            email: '',
+            phone: '',
+            mobile: ''
+        };
+
     }
 
     /* User Create Controller */

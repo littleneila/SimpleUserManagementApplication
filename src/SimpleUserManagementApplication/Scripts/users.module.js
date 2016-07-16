@@ -2,12 +2,12 @@
     'use strict';
 
     angular.module('userApp', [
-        'ngRoute', 'ngMessages', 'userService'
+        'md.data.table', 'ngRoute', 'ngMaterial', 'ngMessages', 'userService'
     ]).config(config);
 
-    config.$inject = ['$routeProvider', '$locationProvider'];
+    config.$inject = ['$routeProvider', '$locationProvider', '$mdThemingProvider'];
 
-    function config($routeProvider, $locationProvider) {
+    function config($routeProvider, $locationProvider, $mdThemingProvider) {
         $routeProvider
             .when('/', {
                 templateUrl: '/Views/list.html',
@@ -31,6 +31,15 @@
             });
 
         $locationProvider.html5Mode(true);
+
+        $mdThemingProvider.theme('default')
+            .primaryPalette('blue')
+            .accentPalette('deep-orange');
+
+        $mdThemingProvider.theme('dark')
+            .primaryPalette('blue')
+            .accentPalette('deep-orange')
+            .backgroundPalette('blue-grey');
     }
 
 })();
