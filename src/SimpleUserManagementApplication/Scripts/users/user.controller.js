@@ -125,6 +125,7 @@
 
     function UserLoginController($location, authenticateUser, $http, $route) {
         var vm = this;
+        
         vm.credentials = { 'Username': '', 'Password': '' };
         vm.login = login;
 

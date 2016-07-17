@@ -1,7 +1,7 @@
 ﻿<div>
   <md-toolbar class="md-table-toolbar md-default">
     <div class="md-toolbar-tools">
-      <h2 class="md-title">Login</h2>
+      <h2 class="md-title">Check username and password</h2>
     </div>
   </md-toolbar>
 
@@ -25,13 +25,8 @@
 
       <div layout="row">
         <md-button href="/" class="md-raised">Cancel</md-button>
-        <md-button type="submit" class="md-raised md-primary" ng-disabled="form.$invalid">Save</md-button>
+        <md-button type="submit" class="md-raised md-primary" ng-disabled="form.$invalid">Check</md-button>
       </div>
-
-      <p>
-        <label ng-model="userLogin.message"></label>
-        <label ng-model="userLogin.username"></label>
-      </p>
 
     </form>
   </md-content>
