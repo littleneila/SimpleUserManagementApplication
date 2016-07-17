@@ -3,6 +3,7 @@
     <div class="md-toolbar-tools">
       <h2 class="md-title">Users</h2>
       <md-button id="create-button" href="/user/add" class="md-raised md-accent">Create a new user</md-button>
+      <md-button id="create-button" href="/user/login" class="md-raised md-accent">Login</md-button>
     </div>
   </md-toolbar>
 
@@ -62,7 +63,7 @@
         <tr md-row md-select="user" md-select-id="UserId" ng-repeat="user in userList.users | orderBy: userList.query.order | filter:filter:strict | limitTo: userList.query.limit : (userList.query.page - 1) * userList.query.limit">
           <td md-cell>{{user.UserId}}</td>
           <td md-cell>{{user.Username}}</td>
-          <td md-cell>{{user.Password}}</td>
+          <td md-cell title="{{user.Password}}">{{user.Password | limitTo: 10 }}{{user.Password.length > 10 ? '...' : ''}}</td>
           <td md-cell>{{user.Firstname}}</td>
           <td md-cell>{{user.Lastname}}</td>
           <td md-cell>{{user.DateOfBirth | date:'dd/MM/yyyy'}}</td>

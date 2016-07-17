@@ -24,11 +24,27 @@
                 controller: 'UserEditController',
                 controllerAs: 'userEdit'
             })
+            .when('/user/editpassword/:id', {
+                templateUrl: '/Views/edit-password.html',
+                controller: 'UserEditPasswordController',
+                controllerAs: 'userEditPassword'
+            })
             .when('/user/delete/:id', {
                 templateUrl: '/Views/delete.html',
                 controller: 'UserDeleteController',
                 controllerAs: 'userDelete'
+            })
+            .when('/user/login', {
+                templateUrl: '/Views/login.html',
+                controller: 'UserLoginController',
+                controllerAs: 'userLogin'
+            })
+            .when('/error', {
+                templateUrl: '/Views/error.html',
+                controller: 'ErrorController'
             });
+        
+        $routeProvider.otherwise({redirectTo: '/'})
 
         $locationProvider.html5Mode(true);
 

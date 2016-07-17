@@ -1,20 +1,10 @@
-﻿<div layout="row">
-  <md-input-container>
-    <input name="Password" type="password" placeholder="Password" ng-model="user.Password" ng-required="true" ng-pattern="passwordPattern">
-    <div ng-messages="form.Password.$error" class="error-label">
-      <div ng-message="required">Your password is required.</div>
-      <div ng-message="pattern">Your password must be at least 8 characters long, contain both letters and numbers, and at least an upper case.</div>
-    </div>
-  </md-input-container>
+﻿<div layout="row" layout-xs="column">
   <md-input-container>
     <input name="Firstname" type="text" placeholder="Firstname" ng-model="user.Firstname" ng-required="true">
     <div ng-messages="form.Firstname.$error" class="error-label">
       <div ng-message="required">Your firstname is required.</div>
     </div>
   </md-input-container>
-</div>
-
-<div layout="row">
   <md-input-container>
     <input name="Lastname" type="text" placeholder="Lastname" ng-model="user.Lastname" ng-required="true">
     <div ng-messages="form.Lastname.$error" class="error-label">
@@ -26,9 +16,9 @@
   </md-input-container>
 </div>
 
-<div layout="row">
+<div layout="row" layout-xs="column">
   <md-input-container>
-    <input name="Email" type="email" placeholder="Email" ng-model="user.Email" ng-required="true" ng-pattern="emailPattern">
+    <input name="Email" type="email" placeholder="Email" ng-model="user.Email" ng-required="true" ng-pattern="patterns.emailPattern">
     <div ng-messages="form.Email.$error" class="error-label">
       <div ng-message="required">Your email is required.</div>
       <div ng-message="pattern">Your email must be a valid email address.</div>

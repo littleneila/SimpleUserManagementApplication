@@ -24,7 +24,7 @@
     isUsernameAvailable.$inject = ['$q', '$http']
 
     function isUsernameAvailable($q, $http) {
-        return function(username) {
+        return function (username) {
             var deferred = $q.defer();
 
             $http.get('/api/users/username/' + username).then(function successCallback() {
@@ -36,4 +36,24 @@
             return deferred.promise;
         }
     }
+})();
+
+(function () {
+    'use strict';
+
+    angular
+        .module('userService')
+        .factory('authenticateUser', authenticateUser)
+
+    authenticateUser.$inject = ['$http']
+
+    function authenticateUser($http) {
+        return function (credentials) {
+            return $http.post('/api/login', credentials).then(function (data) {
+                return data.data;
+            }, function errorCallback() {
+                return { success: 'false' };
+            });
+        }
+    };
 })();

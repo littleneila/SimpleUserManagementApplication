@@ -5,6 +5,17 @@ html, body {
     font-family: 'Roboto';
 }
 
+@media (max-width: 959px) and (min-width: 0) {
+    .md-toolbar-tools {
+        height: 100px;
+        max-height: none;
+    }
+}
+
+md-toolbar.md-table-toolbar:not(.md-menu-toolbar).md-default .md-button.md-accent {
+    color: #fff;
+}
+
 .md-title {
     display: inline-block;
     margin-right: 18px;
@@ -25,10 +36,6 @@ html, body {
 
 .md-button {  
     text-transform: none !important;
-}
-
-#create-button {
-    color: #fff;
 }
 
 

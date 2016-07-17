@@ -4,6 +4,7 @@ using Microsoft.AspNet.Http;
 using Microsoft.AspNet.Mvc;
 using Microsoft.Data.Entity;
 using SimpleUserManagementApplication.Models;
+using SimpleUserManagementApplication.Util;
 
 namespace SimpleUserManagementApplication.Controllers
 {
@@ -58,6 +59,7 @@ namespace SimpleUserManagementApplication.Controllers
                 return HttpBadRequest();
             }
 
+            user.Password = SecurityUtil.DerivePasswordHashAndSalt(user.Password);
             _context.Entry(user).State = EntityState.Modified;
 
             try
@@ -88,7 +90,9 @@ namespace SimpleUserManagementApplication.Controllers
                 return HttpBadRequest(ModelState);
             }
 
+            user.Password = SecurityUtil.DerivePasswordHashAndSalt(user.Password); ;
             _context.User.Add(user);
+
             try
             {
                 _context.SaveChanges();
