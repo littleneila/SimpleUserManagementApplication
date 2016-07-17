@@ -21,7 +21,7 @@
 
         vm.query = {
             order: 'UserId',
-            limit: 15,
+            limit: 5,
             page: 1
         };
 
