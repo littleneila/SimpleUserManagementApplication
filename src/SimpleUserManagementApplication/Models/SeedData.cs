@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using SimpleUserManagementApplication.Util;
 using System;
 using System.Linq;
 
@@ -15,11 +16,13 @@ namespace SimpleUserManagementApplication.Models
                     return;
                 }
 
+                string defaultPassword = "Password123";
+
                 context.User.AddRange(
                      new User
                      {
                          Username = "buster99",
-                         Password = "M2CSFxP31trrKlQL7Niocr3p8slnOpo+EtLGMPpzPPw=lbwhbCice6BZ0Tevuuwo7Q==", //Password123
+                         Password = SecurityUtil.DerivePasswordHashAndSalt(defaultPassword),
                          Firstname = "Buster",
                          Lastname = "Nixon",
                          DateOfBirth = new DateTime(1981, 5, 18),
@@ -30,7 +33,7 @@ namespace SimpleUserManagementApplication.Models
                      new User
                      {
                          Username = "lilo_lee",
-                         Password = "M2CSFxP31trrKlQL7Niocr3p8slnOpo+EtLGMPpzPPw=lbwhbCice6BZ0Tevuuwo7Q==", //Password123
+                         Password = SecurityUtil.DerivePasswordHashAndSalt(defaultPassword),
                          Firstname = "Lilo",
                          Lastname = "Lee",
                          DateOfBirth = new DateTime(1981, 8, 13),
@@ -42,7 +45,7 @@ namespace SimpleUserManagementApplication.Models
                      new User
                      {
                          Username = "dragonslayer",
-                         Password = "M2CSFxP31trrKlQL7Niocr3p8slnOpo+EtLGMPpzPPw=lbwhbCice6BZ0Tevuuwo7Q==", //Password123
+                         Password = SecurityUtil.DerivePasswordHashAndSalt(defaultPassword),
                          Firstname = "Maximus",
                          Lastname = "The Great",
                          DateOfBirth = new DateTime(1985, 3, 20),
@@ -52,7 +55,7 @@ namespace SimpleUserManagementApplication.Models
                     new User
                     {
                         Username = "richardSon",
-                        Password = "M2CSFxP31trrKlQL7Niocr3p8slnOpo+EtLGMPpzPPw=lbwhbCice6BZ0Tevuuwo7Q==", //Password123
+                        Password = SecurityUtil.DerivePasswordHashAndSalt(defaultPassword),
                         Firstname = "John",
                         Lastname = "Richardson",
                         DateOfBirth = new DateTime(1991, 9, 22),
@@ -62,7 +65,7 @@ namespace SimpleUserManagementApplication.Models
                     new User
                     {
                         Username = "capnmorg",
-                        Password = "M2CSFxP31trrKlQL7Niocr3p8slnOpo+EtLGMPpzPPw=lbwhbCice6BZ0Tevuuwo7Q==", //Password123
+                        Password = SecurityUtil.DerivePasswordHashAndSalt(defaultPassword),
                         Firstname = "Captain",
                         Lastname = "Morgan",
                         DateOfBirth = new DateTime(2000, 8, 5),
@@ -72,7 +75,7 @@ namespace SimpleUserManagementApplication.Models
                     new User
                     {
                         Username = "flowerfairy",
-                        Password = "M2CSFxP31trrKlQL7Niocr3p8slnOpo+EtLGMPpzPPw=lbwhbCice6BZ0Tevuuwo7Q==", //Password123
+                        Password = SecurityUtil.DerivePasswordHashAndSalt(defaultPassword),
                         Firstname = "Fairy",
                         Lastname = "Jamie",
                         Email = "flowerfairy@gmail.com"
@@ -81,7 +84,7 @@ namespace SimpleUserManagementApplication.Models
                     new User
                     {
                         Username = "countdragos",
-                        Password = "M2CSFxP31trrKlQL7Niocr3p8slnOpo+EtLGMPpzPPw=lbwhbCice6BZ0Tevuuwo7Q==", //Password123
+                        Password = SecurityUtil.DerivePasswordHashAndSalt(defaultPassword),
                         Firstname = "Dragos",
                         Lastname = "Couz",
                         Email = "countdragos@gmail.com"
@@ -90,7 +93,7 @@ namespace SimpleUserManagementApplication.Models
                     new User
                     {
                         Username = "lgdavidson",
-                        Password = "M2CSFxP31trrKlQL7Niocr3p8slnOpo+EtLGMPpzPPw=lbwhbCice6BZ0Tevuuwo7Q==", //Password123
+                        Password = SecurityUtil.DerivePasswordHashAndSalt(defaultPassword),
                         Firstname = "Lenny",
                         Lastname = "Davidson",
                         Email = "lg@gmail.com"

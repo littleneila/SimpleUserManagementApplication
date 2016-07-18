@@ -30,8 +30,8 @@ namespace SimpleUserManagementApplication
             services.AddEntityFramework()
                 .AddSqlServer()
                 .AddDbContext<ApplicationDbContext>(options =>
-                    //options.UseSqlServer(Configuration["Data:RemoteConnection:ConnectionString"]));
-                    options.UseSqlServer(Configuration["Data:LocalConnection:ConnectionString"]));
+                    options.UseSqlServer(Configuration["Data:RemoteConnection:ConnectionString"]));
+                    //options.UseSqlServer(Configuration["Data:LocalConnection:ConnectionString"]));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()

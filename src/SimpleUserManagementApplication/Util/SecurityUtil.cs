@@ -7,7 +7,7 @@ namespace SimpleUserManagementApplication.Util
 {
     public class SecurityUtil
     {
-        private const int SaltByteSize = 16;
+        private const int SaltByteSize = 32;
         private const int HashByteSize = 32;
         private const int Iterations = 1000;
 
@@ -17,7 +17,7 @@ namespace SimpleUserManagementApplication.Util
                 saltAsByteArray = GenerateSalt();
             }
 
-            // Derive a 256-bit password hash (use HMACSHA1 with 10,000 iterations)
+            // Derive password hash using HMACSHA1
             string passwordHash = Convert.ToBase64String(KeyDerivation.Pbkdf2(
                 password: password,
                 salt: saltAsByteArray,
@@ -51,7 +51,7 @@ namespace SimpleUserManagementApplication.Util
         
         private static byte[] GenerateSalt()
         {
-            // Generate a 128-bit salt using a CSPRNG
+            // Generate salt using a CSPRNG
             RNGCryptoServiceProvider cryptoServiceProvider = new RNGCryptoServiceProvider();
             byte[] salt = new byte[SaltByteSize];
             cryptoServiceProvider.GetNonZeroBytes(salt);
