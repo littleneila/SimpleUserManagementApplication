@@ -19,7 +19,8 @@ Simple user account management application with basic CRUD operations to manage 
 * Follows AngularJS styleguide from [here] (https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#application-structure-lift-principle)
 
 ### Screenshots
-![Home](Screenshots/create.png?raw=true "Home")
+![Home](Screenshots/home.png?raw=true "Home")
+![Create](Screenshots/create.png?raw=true "Create")
 
 
 ## Next steps
