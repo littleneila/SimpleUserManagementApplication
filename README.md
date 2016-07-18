@@ -10,3 +10,10 @@ Functionality:
 * Edit a specific user's password
 * Delete a specific user
 * Check username and password combination
+
+
+
+
+## Next steps
+* Implement logging and exception handling
+* Implement token based authorization
