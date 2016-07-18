@@ -12,7 +12,9 @@ Functionality:
 Features:
 * Styled and responsive using AngularJS Material
 * 8 user accounts are seeded into database upon application startup
-* Email and password pattern validation using ng-messages
+* Simple filtering capabilities when displaying list of users
+* Custom AngularJS theme
+* Required validation, and email and password pattern validation using ng-messages
 * Passwords are hashed using Pbkdf2 and HMACSHA1 with a 32 byte hash and 32 byte salt
 * Follows AngularJS styleguide from [here] (https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#application-structure-lift-principle)
 
