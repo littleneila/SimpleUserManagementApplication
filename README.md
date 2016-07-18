@@ -1,7 +1,5 @@
 # SimpleUserManagementApplication
-
-## Overview
-This is a simple user account management application with basic CRUD operations to manage a user base.
+Simple user account management application with basic CRUD operations to manage a user base.
 
 Functionality:
 * View a list of all the users with pagination
@@ -11,9 +9,18 @@ Functionality:
 * Delete a specific user
 * Check username and password combination
 
+Features:
+* Styled and responsive using AngularJS Material
+* 8 user accounts are seeded into database upon application startup
+* Email and password pattern validation using ng-messages
+* Passwords are hashed using Pbkdf2 and HMACSHA1 with a 32 byte hash and 32 byte salt
 
 
 
 ## Next steps
 * Implement logging and exception handling
 * Implement token based authorization
+* Implement more nUnit tests
+* Implement Angular Material datepicker
+* Implement pattern validation on phone and mobile fields
+* Implement better responsivity on mobile and tablet devices
