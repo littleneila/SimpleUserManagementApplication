@@ -1,4 +1,6 @@
 # SimpleUserManagementApplication
+{ASP.NET 5, MVC 6, EF 7, Web API, AngularJS, NUnit, Angular Material, PBKDF2}
+
 Simple user account management application with basic CRUD operations to manage a user base.
 
 ### Functionality
