@@ -27,6 +27,7 @@ Simple user account management application with basic CRUD operations to manage 
 
 
 ## Next steps
+* Implement a service layer
 * Implement logging and exception handling
 * Implement token based authorization
 * Implement more nUnit tests
