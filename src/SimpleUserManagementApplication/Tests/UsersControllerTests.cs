@@ -21,24 +21,16 @@ namespace SimpleUserManagementApplication.Tests
         [Test]
         public void GetUser_ShouldReturnCorrectUser()
         {
-            string username = "buster99",
-                password = "M2CSFxP31trrKlQL7Niocr3p8slnOpo+EtLGMPpzPPw=lbwhbCice6BZ0Tevuuwo7Q==",
-                firstname = "Buster",
-                lastname = "Nixon",
-                email = "buster123@buster.com",
-                phone = "09-1876-1244";
-
-            DateTime? dateOfBirth = new DateTime(1981, 5, 18);
-
             User testUser = new User
             {
-                Username = username,
-                Password = password,
-                Firstname = firstname,
-                Lastname = lastname,
-                DateOfBirth = dateOfBirth,
-                Email = email,
-                Phone = phone
+                Username = "buster99",
+                Password = "M2CSFxP31trrKlQL7Niocr3p8slnOpo+EtLGMPpzPPw=lbwhbCice6BZ0Tevuuwo7Q==",
+                Firstname = "Buster",
+                Lastname = "Nixon",
+                DateOfBirth = new DateTime(1981, 5, 18),
+                Email = "buster123@buster.com",
+                Phone = "09-1876-1244",
+                Mobile = "021-755-1231"
             };
 
             AddUser(_context, testUser);
